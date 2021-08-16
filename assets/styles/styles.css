@@ -641,9 +641,9 @@ p {
         text-align: center;
     }
     .contact .contact-container .rights h3 {
-        text-align: right;
+        text-align: right
     }
-    .contact .contact-container .rights, a {
+    .contact .contact-container .rights  {
         text-align: right;
     }
 }
