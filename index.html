@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eliel Martinez</title>
+  <link rel="stylesheet" href="assets/styles/normalize.css" />
+  <link rel="stylesheet" href="assets/styles/styles.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +14,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Work+Sans&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles/normalize.css" />
-  <link rel="stylesheet" href="assets/styles/styles.css" />
   <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
@@ -32,59 +32,52 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 </head>
-
 <body>
-    <!-- MENU -->
-    <nav class="menu">
-      <div class="menu-left">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#work">Work</a></li>
-        </ul>
-      </div>
-      <div class="logo">
-        <a href="index.html">
-          <img src="./assets/img/racoon.svg" alt="">
-        </a>
-      </div>
-      <div class="menu-right">
-        <ul>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+  <!-- MENU -->
+  <nav class="menu">
+    <ul class="menu-left">
+      <li><a href="#">Home</a></li>
+      <li><a href="#work">Work</a></li>
+    </ul>
+    <a href="index.html" class="logo">
+      <img src="./assets/img/racoon.svg" alt="">
+    </a>
+    <ul class="menu-right">
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- MENU-MOBILE -->
+  <div class="menu-mobile">
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="./assets/img/racoon.svg" alt="">
+      </a>
+      <a href="#" id="buttonOpenCloseMenu">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" /></svg>
+      </a>
+    </header>
+    <nav id="nav" class="exit">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#work">WORK</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
     </nav>
-    <!-- MENU-MOBILE -->
-    <div class="menu-mobile">
-        <header class="header">
-          <a href="#" class="logo">
-            <img src="./assets/img/racoon.svg" alt="">
-          </a>
-          <a href="#" id="buttonOpenCloseMenu">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" /></svg>
-          </a>
-        </header>
-        <nav id="nav" class="exit">
-          <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="#work">WORK</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-        </nav>
-    </div>
-    <!-- MAIN-IMAGE -->
-    <section class="main-img ">
-      <div class="main-bg ">
-        <div class="main_text ">
-          <h1 class="nomargin">
-            Eliel Martinez
-          </h1>
-          <p class="nomargin typed"></p>
-        </div>
+  </div>
+  <!-- MAIN-IMAGE -->
+  <section class="main-img ">
+    <div class="main-bg ">
+      <div class="main_text ">
+        <h1 class="nomargin">
+          Eliel Martinez
+        </h1>
+        <p class="nomargin typed"></p>
       </div>
+    </div>
 
     </section>
     <!-- INTRO -->
@@ -259,11 +252,11 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
+  <!-- FOOTER -->
+  <footer class="footer">
 
-    </footer>
-  
+  </footer>
+
   <!-- GALLERY -->
   <div id="details-container">
     <nav class="navbar">
@@ -315,5 +308,4 @@
   <script src="assets/js/gallery.js"></script>
   <script src="assets/js/typed.js"></script>
 </body>
-
 </html>
