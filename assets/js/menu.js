@@ -1,10 +1,29 @@
-//ABRIR, CERRAR MENÚ
+`use strict`
+//VARIABLES
 const hamburguer = document.querySelector("#buttonOpenCloseMenu");
-const menuMobile = document.querySelector(`#nav`);
+const nav = document.querySelector(`#nav`);
+const links = document.querySelectorAll(`#nav a`);
 
 //ABRIR Y CERRAR MENÚ
-hamburguer.addEventListener("click", () => {
-  menuMobile.classList.toggle(`exit`);
-  menuMobile.classList.toggle(`entrance`);
+document.addEventListener(`DOMContentLoaded`, () => {
+  showMenu();
+  closeMenu();
 });
 
+function showMenu() {
+  hamburguer.addEventListener(`click`, () => {
+    nav.classList.toggle(`ocultar`);
+  });
+}
+
+function closeMenu() {
+  links.forEach((link) => {
+    link.addEventListener(`click`, (e) => {
+      console.log(e);
+
+      if (e.target.tagName === `A`) {
+        nav.classList.add(`ocultar`);
+      }
+    });
+  });
+}
