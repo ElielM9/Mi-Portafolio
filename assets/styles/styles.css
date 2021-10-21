@@ -68,37 +68,37 @@ h2, h3, h4 {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: var(--titulo);
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: var(--subtitulos);
 }
 
 h3 {
-    font-size: 2.2rem;
+    font-size: 3.2rem;
     text-align: center;
     color: var(--rosaclaro);
 }
 
 h4 {
-    font-size: 2rem;
+    font-size: 2.8rem;
 }
 
 img {
     max-width: 100%;
 }
 
-ul {
-    list-style: none;
-}
-
 p {
     font-size: 1.8rem;
     text-transform: uppercase;
     color: var(--texto);
+}
+
+ul {
+    list-style: none;
 }
 
 /* UTILIDADES */
@@ -290,7 +290,7 @@ p {
     background-position: center center;
     text-align: center;
     margin-top: 10rem;
-    margin-bottom: 15rem;
+    margin-bottom: 7.5rem;
     height: 20rem;
     max-width: 100%;
     transform-origin: 0 0;
@@ -298,7 +298,7 @@ p {
     overflow: hidden;
 }
 
-.main-img .main-bg {
+.main-bg {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -307,7 +307,7 @@ p {
     height: 100%;
 }
 
-.main-img .main_text {
+.main_text {
     transform: skewY(10deg);
 }
 
@@ -319,11 +319,17 @@ p {
 
 .intro {
     display: grid;
-    text-align: center;
-    width: 55%;
     margin: 0 auto;
     margin-top: -10rem;
-    padding-bottom: 10rem;
+}
+
+.intro h2 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.text__intro {
+    text-align: center;
 }
 
 /* WORK */
@@ -414,8 +420,8 @@ p {
     padding-bottom: 15rem;
 }
 
-.skills p {
-    font-size: 2.4rem;
+.skills>h3 {
+    color: var(--texto);
 }
 
 .content__skills {
@@ -440,19 +446,24 @@ p {
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--primario);
     box-shadow: 1rem 1rem 1.6rem -6px rgba(0, 0, 0, .45);
     transition: all .2s ease-in-out;
 }
 
-.skill:hover .bx{
+.skill h3 {
+    font-size: 2.8rem;
+}
+
+.skill:hover .bx {
     color: var(--subtitulos);
     background: var(--primario);
     border: 2px solid var(--subtitulos);
 }
 
 /* CONTACT */
+
 .contact {
     background-color: #000;
     padding-top: 15rem;
@@ -557,14 +568,15 @@ p {
     }
 }
 
-/** ESCRITORIO **/
+/** TABLET **/
 
 @media(min-width: 550px) {
     /* MENU */
     /* LOGO */
     /* IMAGE */
     .main-img {
-        margin-top: 15rem;
+        margin-top: 12.5rem;
+        margin-bottom: 10rem;
     }
     .main-bg {
         height: 100%;
@@ -577,6 +589,10 @@ p {
         height: 12rem;
     }
     /* SKILLS */
+    .content__skills {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
 }
 
 @media(min-width: 920px) {
@@ -586,6 +602,9 @@ p {
     }
     h2 {
         font-size: 4rem;
+    }
+    h3 {
+        font-size: 3.5rem;
     }
     p {
         font-size: 2rem;
@@ -629,13 +648,17 @@ p {
     }
     /* IMAGE */
     .main-img {
-        margin-top: 25rem;
+        margin-top: 20rem;
         height: 40rem;
     }
     .main-img .main_text {
         margin-top: 0;
     }
     .main-img .main_text p {
+        font-size: 2.5rem;
+    }
+    /* INTRO */
+    .text__intro p{
         font-size: 2.5rem;
     }
     /* WORK */
@@ -649,36 +672,42 @@ p {
         height: 15rem;
     }
     /* SKILLS */
-    .skills p {
-        font-size: 2.5rem;
-    }
     .content__skills {
         grid-template-columns: repeat(3, 1fr);
-        gap: 4rem;
+    }
+    .skill h3 {
+        font-size: 3rem;
     }
     /* CONTACT */
     .contact-container {
         width: 110rem;
         margin: 0 auto;
+        padding: 0;
     }
     .columns {
         display: flex;
         justify-content: space-between;
         gap: 2rem;
     }
-    .contact .contact-container .location h3 {
+    .columns h3 {
+        margin: 1rem;
+    }
+    .columns p {
+        margin: 1rem;
+    }
+    .contact-container .location h3 {
         text-align: left;
     }
-    .contact .contact-container .location {
+    .contact-container .location {
         text-align: left;
     }
-    .contact .contact-container .social {
+    .contact-container .social {
         text-align: center;
     }
-    .contact .contact-container .rights h3 {
+    .contact-container .rights h3 {
         text-align: right
     }
-    .contact .contact-container .rights {
+    .contact-container .rights {
         text-align: right;
     }
 }
