@@ -73,13 +73,15 @@ h1 {
 }
 
 h2 {
-    font-size: 3.5rem;
+    font-size: 3.7rem;
     color: var(--subtitulos);
+    margin: 1rem;
+    margin-bottom: 2rem;
 }
 
 h3 {
+    margin: 1rem;
     font-size: 3.2rem;
-    text-align: center;
     color: var(--rosaclaro);
 }
 
@@ -95,6 +97,7 @@ p {
     font-size: 1.8rem;
     text-transform: uppercase;
     color: var(--texto);
+    margin: 1rem;
 }
 
 ul {
@@ -323,10 +326,6 @@ ul {
     margin-top: -10rem;
 }
 
-.intro h2 {
-    text-align: center;
-    margin-bottom: 0;
-}
 
 .text__intro {
     text-align: center;
@@ -454,6 +453,7 @@ ul {
 
 .skill h3 {
     font-size: 2.8rem;
+    margin: 1rem;
 }
 
 .skill:hover .bx {
@@ -477,6 +477,7 @@ ul {
     width: 90%;
     margin: 0 auto;
 }
+
 
 .columns div {
     width: 100%;
@@ -604,7 +605,7 @@ ul {
         font-size: 4rem;
     }
     h3 {
-        font-size: 3.5rem;
+        font-size: 3.4rem;
     }
     p {
         font-size: 2rem;
@@ -658,7 +659,7 @@ ul {
         font-size: 2.5rem;
     }
     /* INTRO */
-    .text__intro p{
+    .text__intro p {
         font-size: 2.5rem;
     }
     /* WORK */
@@ -688,12 +689,6 @@ ul {
         display: flex;
         justify-content: space-between;
         gap: 2rem;
-    }
-    .columns h3 {
-        margin: 1rem;
-    }
-    .columns p {
-        margin: 1rem;
     }
     .contact-container .location h3 {
         text-align: left;
