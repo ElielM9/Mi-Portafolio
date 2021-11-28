@@ -49,9 +49,7 @@ h1 {
 h2 {
   font-size: 4rem;
   color: c.$rosa;
-  @include m.tablet {
-    font-size: 4.4rem;
-  }
+
 }
 h3 {
   font-size: 3.4rem;
