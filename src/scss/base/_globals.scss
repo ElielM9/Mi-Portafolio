@@ -1,7 +1,6 @@
 @use "config/fonts" as f;
 @use "config/colors" as c;
-@use 'mixins/breakpoints' as m;
-
+@use "mixins/breakpoints" as m;
 
 html {
   font-size: 62.5%;
@@ -34,8 +33,14 @@ h3 {
 }
 
 h1 {
-  font-size: 4.8rem;
+  font-size: 4rem;
   color: c.$lila;
+  @include m.tablet {
+    font-size: 4.8rem;
+  }
+  @include m.escritorio {
+    font-size: 6rem;
+  }
   &::selection {
     background-color: c.$rosa;
   }
@@ -44,6 +49,9 @@ h1 {
 h2 {
   font-size: 4rem;
   color: c.$rosa;
+  @include m.tablet {
+    font-size: 4.4rem;
+  }
 }
 h3 {
   font-size: 3.4rem;
@@ -54,17 +62,26 @@ p {
   font-size: 2rem;
   color: c.$blanco;
   margin: 1rem;
+  @include m.tablet {
+    font-size: 2.5rem;
+  }
 }
 
 a {
   text-decoration: none;
   text-transform: uppercase;
+  font-weight: bold;
   line-height: 1.6;
   padding: 1rem;
   transition: 0.2s ease-in-out;
   color: c.$rosa;
-  &:hover {
-    color: c.$lila;
+  &:active {
+    color: c.$morado;
+  }
+  @include m.hover {
+    &:hover {
+      color: c.$lila;
+    }
   }
 }
 
