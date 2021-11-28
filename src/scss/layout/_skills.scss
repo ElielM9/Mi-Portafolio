@@ -1,0 +1,47 @@
+@use "config/colors" as c;
+@use "mixins/breakpoints" as m;
+@use "mixins/grid" as g;
+
+.skills {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 15rem;
+  h3 {
+    color: c.$blanco;
+  }
+  &__content {
+    display: grid;
+    @include m.tablet {
+      @include g.grid(2, 4rem);
+    }
+    @include m.escritorio {
+      @include g.grid(3, 4rem);
+    }
+  }
+  &__skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: c.$rosa;
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      font-size: 4rem;
+      color: c.$morado;
+      box-shadow: 1rem 1rem 1.6rem -6px rgba(0, 0, 0, 0.45);
+    }
+    h3 {
+      color: c.$rosaclaro;
+      font-size: 2.8rem;
+      margin: 1rem;
+      @include m.escritorio {
+        font-size: 3rem;
+      }
+    }
+  }
+}

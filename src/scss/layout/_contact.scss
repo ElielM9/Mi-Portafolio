@@ -1,0 +1,75 @@
+@use "config/colors" as c;
+@use "mixins/breakpoints" as m;
+
+.contact {
+  background-color: #000;
+  padding-top: 15rem;
+  color: c.$blanco;
+  transform: skewY(-10deg);
+  &__columns {
+    div {
+      width: 100%;
+      text-align: center;
+    }
+    @include m.escritorio {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+  }
+}
+
+.contact__container {
+  transform: skewY(10deg);
+  color: c.$blanco;
+  width: 90%;
+  margin: 0 auto;
+  @include m.escritorio {
+    width: 110rem;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .contact__location {
+    @include m.escritorio {
+      text-align: left;
+    }
+    h3 {
+      @include m.escritorio {
+        text-align: left;
+      }
+    }
+  }
+  .contact__rights {
+    @include m.escritorio {
+      text-align: right;
+    }
+    @include m.escritorio {
+      h3 {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.contact__social {
+  margin-top: 2rem;
+  a {
+    svg {
+      width: 4rem;
+      fill: c.$rosa;
+    }
+    &:hover {
+      path {
+        transition: all ease 0.5s;
+        fill: c.$lila;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #000;
+  height: 45rem;
+  margin-top: -17rem;
+}

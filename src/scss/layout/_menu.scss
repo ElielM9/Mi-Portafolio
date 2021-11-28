@@ -1,0 +1,108 @@
+@use "config/fonts" as f;
+@use "config/colors" as c;
+@use "mixins/breakpoints" as m;
+
+.menu {
+  display: none;
+
+  @include m.escritorio {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 10rem auto 0 auto;
+    width: 50%;
+    align-items: center;
+  }
+  ul {
+    @include m.escritorio {
+      width: 33%;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+    }
+    li {
+      @include m.escritorio {
+        animation-name: opening-logo;
+        animation-duration: 1.6s;
+        animation-timing-function: ease-in-out;
+        a {
+          font-family: f.$textos;
+          font-size: 2.7rem;
+        }
+      }
+    }
+  }
+  .logo {
+    img {
+      text-align: center;
+      width: 7rem;
+      animation-name: opening-logo;
+      animation-duration: 1.6s;
+      animation-timing-function: ease-in-out;
+    }
+  }
+}
+
+.menu-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: c.$morado;
+  top: 0;
+  width: 100%;
+  height: 7rem;
+  @include m.escritorio {
+    display: none;
+  }
+}
+
+.icon {
+  .logo {
+    img {
+      display: block;
+      width: 5rem;
+      height: 9rem;
+      margin: 1rem;
+      animation-name: opening-logo;
+      animation-duration: 1.6s;
+      animation-timing-function: ease-in-out;
+    }
+  }
+}
+
+.nav {
+  position: absolute;
+  width: 100%;
+  top: 6rem;
+  background-color: c.$morado;
+  z-index: 1;
+  a {
+    display: block;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: block;
+    padding: 1.5rem 0;
+    color: c.$rosaclaro;
+    &:active {
+      color: c.$morado;
+      background-color: c.$rosaclaro;
+    }
+  }
+}
+
+.hamburguer {
+  a {
+    svg {
+      display: block;
+      margin: 1rem;
+      fill: c.$rosa;
+      width: 4rem;
+      height: 9rem;
+    }
+  }
+}

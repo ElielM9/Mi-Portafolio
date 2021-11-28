@@ -1,0 +1,96 @@
+@use "config/colors" as c;
+@use "config/fonts" as f;
+@use "mixins/breakpoints" as m;
+@use "mixins/grid" as g;
+
+.work {
+  &__title {
+    margin-bottom: 5rem;
+    @include m.tablet {
+      margin-bottom: 10rem;
+    }
+    @include m.escritorio {
+      margin-bottom: 13rem;
+    }
+  }
+
+  &__items {
+    padding-top: 2rem;
+    transform-origin: 0 0;
+    transform: skewY(-10deg);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  @include m.tablet {
+    @include g.grid(2, 0);
+  }
+  @include m.escritorio {
+    @include g.grid(3, 0);
+  }
+  &__item {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    height: 15rem;
+    @include m.tablet {
+      height: 12rem;
+    }
+    @include m.escritorio {
+      height: 15rem;
+    }
+    img {
+      width: 101%;
+      margin-top: -6rem;
+      transform: skewY(10deg) scale(1, 1);
+      transition: all 0.75s;
+    }
+    &:hover {
+      img {
+        transform: skewY(10deg) scale(1.4, 1.4);
+      }
+    }
+  }
+}
+
+.grid__item {
+  .bg-hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 150%;
+    display: grid;
+    position: absolute;
+    z-index: 2;
+    top: -25%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    transform: skewY(10deg) scale(1, 1);
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    .title {
+      color: c.$blanco;
+    }
+    .customer {
+      color: c.$rosaclaro;
+    }
+  }
+  &:hover {
+    .bg-hover {
+      opacity: 1;
+      overflow: hidden;
+    }
+  }
+  &:hover {
+    .bg-hover {
+      .info {
+        animation-name: bounce;
+        animation-duration: 0.4s;
+        animation-timing-function: ease-in-out;
+      }
+    }
+  }
+}
