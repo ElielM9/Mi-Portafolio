@@ -48,7 +48,8 @@
       transform: skewY(10deg) scale(1, 1);
       transition: all 0.75s;
     }
-    &:hover {
+    &:hover,
+    &:active {
       img {
         transform: skewY(10deg) scale(1.4, 1.4);
       }
@@ -71,20 +72,19 @@
     justify-items: center;
     align-items: center;
     text-align: center;
-    .title {
-      color: c.$blanco;
-    }
-    .customer {
-      color: c.$rosaclaro;
+    .info__btn {
+      margin: 1rem;
     }
   }
-  &:hover {
+  &:hover,
+  &:active {
     .bg-hover {
       opacity: 1;
       overflow: hidden;
     }
   }
-  &:hover {
+  &:hover,
+  &:active {
     .bg-hover {
       .info {
         animation-name: bounce;
