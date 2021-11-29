@@ -3,6 +3,7 @@
 
 .contact {
   background-color: #000;
+  text-transform: uppercase;
   padding-top: 15rem;
   color: c.$blanco;
   transform: skewY(-10deg);
@@ -43,11 +44,14 @@
   }
   .contact__rights {
     @include m.escritorio {
-      text-align: right;
-    }
-    @include m.escritorio {
-      h3 {
+      h3,
+      p {
         text-align: right;
+      }
+      p {
+        a {
+        padding-right: 0;
+        }
       }
     }
   }
