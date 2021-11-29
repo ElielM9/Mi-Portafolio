@@ -48,16 +48,9 @@
       transform: skewY(10deg) scale(1, 1);
       transition: all 0.75s;
     }
-    &:active {
+    &:hover {
       img {
         transform: skewY(10deg) scale(1.4, 1.4);
-      }
-    }
-    &:hover {
-      @include m.hover {
-        img {
-          transform: skewY(10deg) scale(1.4, 1.4);
-        }
       }
     }
   }
@@ -82,38 +75,18 @@
       font-size: 1.8rem;
     }
   }
-
-  &:active {
+  &:hover {
     .bg-hover {
       opacity: 1;
       overflow: hidden;
     }
   }
   &:hover {
-    @include m.hover {
-      .bg-hover {
-        opacity: 1;
-        overflow: hidden;
-      }
-    }
-  }
-  &:active {
     .bg-hover {
       .info {
         animation-name: bounce;
         animation-duration: 0.4s;
         animation-timing-function: ease-in-out;
-      }
-    }
-  }
-  &:hover {
-    @include m.hover {
-      .bg-hover {
-        .info {
-          animation-name: bounce;
-          animation-duration: 0.4s;
-          animation-timing-function: ease-in-out;
-        }
       }
     }
   }
