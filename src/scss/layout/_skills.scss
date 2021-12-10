@@ -3,20 +3,22 @@
 @use "mixins/grid" as g;
 
 .skills {
-  width: 50%;
   text-align: center;
   margin: 0 auto;
   padding-bottom: 15rem;
+  @include m.tablet {
+    width: 70%;
+  }
   h3 {
     color: c.$blanco;
   }
   &__content {
     display: grid;
     @include m.tablet {
-      @include g.grid(2, 4rem);
+      @include g.grid(2, 2rem);
     }
     @include m.escritorio {
-      @include g.grid(3, 4rem);
+      @include g.grid(3, 3rem);
     }
   }
   &__skill {

@@ -33,7 +33,7 @@ function html(done) {
   src("src/views/*.html")
     .pipe(sourcemaps.init())
     .pipe(plumber())
-    .pipe(htmlMin((options)))
+    .pipe(htmlMin(options))
     .pipe(sourcemaps.write(`.`))
     .pipe(dest("public/"));
 
@@ -58,6 +58,7 @@ function img(done) {
   };
 
   src(`src/assets/*/**/*.{png,jpg,jpeg}`)
+    .pipe(plumber())
     .pipe(cache(imgMin(options)))
     .pipe(dest(`public/assets/`));
 
@@ -70,6 +71,7 @@ function vWebp(done) {
   };
 
   src(`src/assets/img/**/*.{png,jpg}`)
+    .pipe(plumber())
     .pipe(webp(options))
     .pipe(dest(`public/assets/img`));
 
@@ -82,6 +84,7 @@ function vAvif(done) {
   };
 
   src(`src/assets/img/**/*.{png,jpg}`)
+    .pipe(plumber())
     .pipe(avif(options))
     .pipe(dest(`public/assets/img`));
 
@@ -92,23 +95,24 @@ function javaScript(done) {
   src(`src/js/**/*.js`)
     .pipe(sourcemaps.init())
     .pipe(concat("scripts-min.js"))
+    .pipe(plumber())
     .pipe(babel())
     .pipe(terser())
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write(`.`))
     .pipe(dest(`public/js`));
 
   done();
 }
 
 function dev(done) {
+  watch(`src/views/**/*.html`)
   watch(`src/scss/**/*.scss`, css);
   watch(`src/js/**/*.js`, javaScript);
 
   done();
 }
 
-
-exports.html = html
+exports.html = html;
 exports.css = css;
 exports.js = javaScript;
 exports.img = img;

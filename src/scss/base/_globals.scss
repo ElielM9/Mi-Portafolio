@@ -17,6 +17,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: f.$textos;
+  line-height: 1.5;
   background-color: c.$morado;
   ::selection {
     background-color: c.$lila;
@@ -29,11 +30,12 @@ h3 {
   text-transform: uppercase;
   text-align: center;
   margin: 2rem;
-  font-family: f.$titulos;
+  line-height: 1.2;
 }
 
 h1 {
   font-size: 4rem;
+  font-family: f.$titulo;
   @include m.tablet {
     font-size: 4.8rem;
   }
@@ -46,8 +48,10 @@ h1 {
   }
 }
 
+
 h2 {
-  font-size: 4rem;
+  font-size: 3.8rem;
+  font-family: f.$subtitulos;
   color: c.$rosa;
 }
 h3 {
@@ -56,6 +60,7 @@ h3 {
   margin: 1rem;
 }
 p {
+  font-family: f.$textos;
   font-size: 2rem;
   color: c.$blanco;
   margin: 1rem;
